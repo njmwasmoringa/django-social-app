@@ -38,6 +38,29 @@ class AuthViewSet(viewsets.ModelViewSet):
         else:
             return Response({'message': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 
+    
+    @action(detail=False, methods=[HTTPMethod.POST], 
+            permission_classes=[permissions.AllowAny],
+            url_path=r'signup'
+        )
+    def signup(self, request):
+        name = request.data.get('fullname')
+        username = request.data.get('username')
+        email = request.data.get('email')
+        # phone_number = request.data.get('phone_number')
+        password = request.data.get('password')
+        confirm_password = request.data.get('confirm_password')
+        
+        user = User.objects.create_user(username, email, password)
+        if user is not None:
+            profile = Profile.objects.create(
+                user=user, 
+                fullname=name, 
+                # phone_number=phone_number,
+                email=email)
+            return Response({'message': 'User created successfully'}, status=status.HTTP_201_CREATED)
+        else:
+            return Reaction({'message': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 
 class UserViewSet(viewsets.ModelViewSet):
     authentication_classes = [TokenAuthentication]

@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'environ',
     'cloudinary_storage',
-    'cloudinary'
+    'cloudinary',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -57,6 +58,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'socialmedia.urls'
@@ -139,6 +142,9 @@ REST_FRAMEWORK = {
         'socialmedia_api.helpers.authentication.BearerAuthentication'
     ]
 }
+
+CORS_ALLOWED_ORIGINS = ['http://localhost:3000']
+CORS_ALLOW_CREDENTIALS = True
 
 # CLOUDINARY CONFIGURATION
 CLOUDINARY_STORAGE = {

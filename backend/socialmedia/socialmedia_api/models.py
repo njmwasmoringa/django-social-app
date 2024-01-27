@@ -12,7 +12,7 @@ class Profile(models.Model):
     )
     fullname = models.CharField(max_length=50)
     avatar = models.ImageField(upload_to='images', null=True)
-    phone_number = models.CharField(max_length=20)
+    phone_number = models.CharField(max_length=20, null=True)
     email = models.CharField(max_length=200)
 
 

@@ -14,5 +14,6 @@ router.register(r'users', UserViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('auth/signin', AuthViewSet.as_view({'post': 'signin'}), name='signin'),
+    path('auth/signup', AuthViewSet.as_view({'post': 'signup'}), name='signup'),
     path('auth', include('rest_framework.urls', namespace='rest_framework'))
 ]
