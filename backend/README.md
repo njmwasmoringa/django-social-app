@@ -1,4 +1,4 @@
-# Social App DJANGO API
+# Social App Django API
 This is the API that powers the social application
 
 ## Technologies
