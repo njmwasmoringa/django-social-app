@@ -11,7 +11,7 @@ class Profile(models.Model):
         null = True
     )
     fullname = models.CharField(max_length=50)
-    avatar = models.CharField(max_length=200)
+    avatar = models.ImageField(upload_to='images')
     phone_number = models.CharField(max_length=20)
     email = models.CharField(max_length=200)
 
@@ -24,7 +24,7 @@ class Post(models.Model):
         null = True
     )
     message = models.CharField(max_length=100)
-    media = models.CharField(max_length=32)
+    media = models.ImageField(upload_to='images')
 
 
 class Comment(models.Model):

@@ -45,7 +45,6 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserViewSet
     permission_classes = [permissions.IsAuthenticated]
     
-    
 
 class ProfileViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all()
