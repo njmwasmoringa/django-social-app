@@ -7,6 +7,10 @@ name = "pypi"
 django = "*"
 djangorestframework = "*"
 ipdb = "*"
+django-environ = "*"
+cloudinary = "*"
+django-cloudinary-storage = "*"
+pillow = "*"
 
 [dev-packages]
 
