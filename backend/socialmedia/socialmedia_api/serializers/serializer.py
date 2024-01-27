@@ -1,6 +1,11 @@
 from socialmedia_api.models import *
-
 from rest_framework import serializers
+
+class UserViewSet(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'email']
+        
 
 class CommentSeliazer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -16,5 +21,10 @@ class ReactionSeliazer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Reaction
         fields = ['id', 'reaction', 'name']
+        
+""" class AuthSeliazer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'password'] """
 
 
