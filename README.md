@@ -28,7 +28,7 @@ Once that is installed, use it to install NodeJs version 16.20.2 or v18.19.0 usi
 nvm install v18.19.0
 ```
 	
-##Backend Development Environment
+## Backend Development Environment
 We will be  using Python Django Framework for our backend development so, we need to install python3.10.8
 Before installing, first confirm if it is already installed using this command
 
