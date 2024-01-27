@@ -9,8 +9,7 @@ router.register(r'profiles', ProfileViewSet)
 router.register(r'posts', PostViewSet)
 router.register(r'comments', CommentViewSet)
 router.register(r'users', UserViewSet)
-# router.register(r'signin', UserViewSet.as_view({'post': 'signin'}), basename='signin')
-# router.register(r'Reactions', Rea)
+# router.register(r'auth/signin', AuthViewSet, action="signin", basename='auth')
 
 urlpatterns = [
     path('', include(router.urls)),
