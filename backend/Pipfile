@@ -6,6 +6,12 @@ name = "pypi"
 [packages]
 django = "*"
 djangorestframework = "*"
+ipdb = "*"
+django-environ = "*"
+cloudinary = "*"
+django-cloudinary-storage = "*"
+pillow = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
