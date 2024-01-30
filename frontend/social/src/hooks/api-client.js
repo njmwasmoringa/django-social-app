@@ -14,7 +14,7 @@ export default function useApi() {
             ...config, 
             headers: {
                 Authorization: `Bearer ${sessionStorage.getItem('token')}`,
-                "Content-Type": "applicaiton/json"
+                "Content-Type": config.headers["Content-Type"] || "applicaiton/json"
             }
         }
     })
