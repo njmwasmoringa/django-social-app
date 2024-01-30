@@ -1,1 +1,3 @@
 ./backend/socialmedia/socialmedia/.env
+./frontend/social/.env
+./backend/socialize/db.sqlite3
